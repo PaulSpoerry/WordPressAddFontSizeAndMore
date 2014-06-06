@@ -2,11 +2,13 @@ function enable_more_buttons($buttons) {
   $buttons[] = 'fontselect';
   $buttons[] = 'fontsizeselect';
   $buttons[] = 'styleselect';
-  $buttons[] = 'subscript';
-  $buttons[] = 'superscript';
-  $buttons[] = 'cleanup';
-  $buttons[] = 'cut';
+  $buttons[] = 'backcolor';
+  //$buttons[] = 'subscript';
+  //$buttons[] = 'superscript';
   $buttons[] = 'copy';
+  $buttons[] = 'cut';
+  $buttons[] = 'paste';
+  $buttons[] = 'wp_page';
   return $buttons;
 }
 add_filter("mce_buttons_3", "enable_more_buttons");
