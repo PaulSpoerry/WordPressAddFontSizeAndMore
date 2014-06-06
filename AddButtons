@@ -1,12 +1,19 @@
 function enable_more_buttons($buttons) {
-  $buttons[] = 'hr';
-  $buttons[] = 'sub';
-  $buttons[] = 'sup';
   $buttons[] = 'fontselect';
   $buttons[] = 'fontsizeselect';
-  $buttons[] = 'cleanup';
   $buttons[] = 'styleselect';
- 
+  $buttons[] = 'subscript';
+  $buttons[] = 'superscript';
+  $buttons[] = 'cleanup';
+  $buttons[] = 'cut';
+  $buttons[] = 'copy';
   return $buttons;
 }
 add_filter("mce_buttons_3", "enable_more_buttons");
+
+//uncomment the following if you want kitchen sink displayed always on by default
+//add_filter( 'tiny_mce_before_init', 'myformatTinyMCE' );
+//function myformatTinyMCE( $in ) {
+//  $in['wordpress_adv_hidden'] = FALSE;
+//  return $in;
+//}
